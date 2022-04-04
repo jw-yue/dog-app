@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 //import pages
 import Home from './pages/Home'
-// import SingleDog from './pages/SingleDog'
+import SingleDog from './pages/SingleDog'
 import Error from './pages/Error'
 
 function App() {
@@ -10,6 +10,9 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/dog">
           <Home />
         </Route>
         <Route path="*">

@@ -1,5 +1,5 @@
 import React from 'react'
-import Dog from './Dog'
+import DogCard from './Dog'
 import Loading from '../loading/Loading'
 import { useGlobalContext } from '../../context/context'
 import AddDog from '../dogManagment/AddDog'
@@ -30,7 +30,7 @@ const DogList = () => {
       <h2 className="section-title">Dogs of Voyant</h2>
       <div className="dogs-center">
         {dogs.map((item) => {
-          return <Dog key={item.id} {...item} />
+          return <DogCard key={item.id} {...item} />
         })}
       </div>
     </section>

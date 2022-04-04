@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { useCallback } from 'react'
 import { allDogs } from '../data'
+import QuestionDog from '../question_dog.jpg'
 
 const AppContext = React.createContext()
 
@@ -60,7 +61,7 @@ const AppProvider = ({ children }) => {
     if (newDogCalled) {
       form.id = dogs.length + 1
       if (form.image === undefined || form.image === '') {
-        form.image = 'assets/question_dog.jpg'
+        form.image = QuestionDog
       }
       dogs.push(form)
     } else if (editDogCalled) {
@@ -114,7 +115,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchDogs()
-  }, [fetchDogs, searchTerm, newDogCalled])
+  }, [fetchDogs, searchTerm])
 
   useEffect(() => {
     getDogs()

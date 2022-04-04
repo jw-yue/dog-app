@@ -1,6 +1,7 @@
 import React from 'react'
 import DeleteDog from '../dogManagment/DeleteDog'
 import EditDog from '../dogManagment/EditDog'
+import QuestionDog from '../../question_dog.jpg'
 import './styles.scss'
 
 const DogCard = ({ name, id, breed, image, owner, size, description }) => {
@@ -8,11 +9,12 @@ const DogCard = ({ name, id, breed, image, owner, size, description }) => {
     <article className="dog">
       <div className="img-container">
         <img
-          src={image}
+          src={process.env.PUBLIC_URL + image}
           alt={name}
           onError={({ currentTarget }) => {
             currentTarget.onerror = null // prevents looping
-            currentTarget.src = 'assets/question_dog.jpg'
+            currentTarget.src = QuestionDog
+            console.log(currentTarget)
           }}
         />
       </div>
