@@ -13,7 +13,7 @@ const DogList = () => {
   if (dogs.length < 1) {
     return (
       <section className="section">
-        <div className="cocktail-section">
+        <div className="dog-section">
           <AddDog />
         </div>
         <h2 className="section-title">no dogs match your search criteria</h2>
@@ -24,11 +24,11 @@ const DogList = () => {
 
   return (
     <section className="section">
-      <div className="cocktail-section">
+      <div className="dog-section">
         <AddDog />
       </div>
       <h2 className="section-title">Dogs of Voyant</h2>
-      <div className="cocktails-center">
+      <div className="dogs-center">
         {dogs.map((item) => {
           return <Dog key={item.id} {...item} />
         })}

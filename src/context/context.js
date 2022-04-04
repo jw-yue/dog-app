@@ -114,7 +114,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchDogs()
-  }, [fetchDogs, searchTerm])
+  }, [fetchDogs, searchTerm, newDogCalled])
 
   useEffect(() => {
     getDogs()

@@ -63,7 +63,7 @@ const Form = ({ isAddCalled, id }) => {
                 <FormInput label="Owner" name="owner" />
                 <FormInput label="Size" name="size" />
                 <FormInput label="Description" name="description" />
-                <FormInput label="Image Src" name="image" />
+                <FormInput label="Image Link" name="image" />
 
                 <button className="btn-primary" type="submit">
                   Submit

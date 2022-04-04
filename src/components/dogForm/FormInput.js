@@ -6,7 +6,7 @@ const FormInput = (props) => {
   return (
     <div>
       <label>{label}</label>
-      <input type={type} name={name} value={value} />
+      <input type={type} name={name} value={value} required />
     </div>
   )
 }

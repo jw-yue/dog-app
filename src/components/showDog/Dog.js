@@ -5,7 +5,7 @@ import './styles.scss'
 
 const DogCard = ({ name, id, breed, image, owner, size, description }) => {
   return (
-    <article className="cocktail">
+    <article className="dog">
       <div className="img-container">
         <img
           src={image}
@@ -16,12 +16,12 @@ const DogCard = ({ name, id, breed, image, owner, size, description }) => {
           }}
         />
       </div>
-      <div className="cocktail-footer">
+      <div className="dog-footer">
         <h3>{name}</h3>
-        <h4>{breed}</h4>
-        <h5>{owner}</h5>
-        <h6>{size}</h6>
-        <p>{description}</p>
+        <h2>{breed}</h2>
+        <h4>Owner: {owner}</h4>
+        <h4 className="right">Size: {size}</h4>
+        <h5 className="letter-spacing">{description}</h5>
       </div>
       <div>
         <span className="padding-left">

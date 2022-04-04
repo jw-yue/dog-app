@@ -1,7 +1,7 @@
 import React from 'react'
 import DogForm from '../dogForm/DogForm'
 
-const AddDog = ({ id }) => {
+const AddDog = () => {
   const isAddCalled = true
 
   return (

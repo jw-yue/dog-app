@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 //import pages
 import Home from './pages/Home'
-import SingleRecipe from './pages/SingleRecipe'
+import SingleDog from './pages/SingleDog'
 import Error from './pages/Error'
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/recipe/:id">
-          <SingleRecipe />
+        <Route path="/dog/:id">
+          <SingleDog />
         </Route>
         <Route path="*">
           <Error />

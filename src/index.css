@@ -52,7 +52,8 @@ h4,
 h5,
 h6 {
   font-family: var(--slantedFont);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
   letter-spacing: var(--mainSpacing);
 }
 p {
@@ -143,7 +144,7 @@ Error
 }
 /* 
 ====== 
-Cocktails List 
+dogs List 
 ======
 */
 
@@ -158,7 +159,7 @@ Cocktails List
   margin-bottom: 3.5rem;
   margin-top: 1rem;
 }
-.cocktails-center {
+.dogs-center {
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--fullWidth);
@@ -168,17 +169,17 @@ Cocktails List
   /* align-items: start; */
 }
 @media screen and (min-width: 576px) {
-  .cocktails-center {
+  .dogs-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }
 /* 
 ====== 
-Cocktail 
+dog 
 ======
 */
 
-.cocktail {
+.dog {
   background: var(--mainWhite);
   margin-bottom: 2rem;
   box-shadow: var(--lightShadow);
@@ -187,27 +188,27 @@ Cocktail
   grid-template-rows: auto 1fr;
   border-radius: var(--mainBorderRadius);
 }
-.cocktail:hover {
+.dog:hover {
   box-shadow: var(--darkShadow);
 }
-.cocktail img {
+.dog img {
   height: 20rem;
   object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
 }
-.cocktail-footer {
+.dog-footer {
   padding: 1.5rem;
 }
-.cocktail-footer h3,
-.cocktail-footer h4,
-.cocktail-footer p {
+.dog-footer h3,
+.dog-footer h4,
+.dog-footer p {
   margin-bottom: 0.3rem;
 }
-.cocktail-footer h3 {
+.dog-footer h3 {
   font-size: 2rem;
 }
-.cocktail-footer p {
+.dog-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
 }
@@ -255,11 +256,11 @@ Form
 }
 /* 
 ====== 
-Cocktail
+dog
 ======
 */
 
-.cocktail-section {
+.dog-section {
   text-align: center;
 }
 .drink {
