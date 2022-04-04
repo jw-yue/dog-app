@@ -1,12 +1,10 @@
 import React from 'react'
-import DogList from '../components/DogList'
-import SearchForm from '../components/SearchForm'
-import AddDog from '../components/AddDog'
+import DogList from '../components/showDog/DogList'
+import SearchForm from '../components/dogManagment/SearchForm'
 
 const Home = () => {
   return (
     <main>
-      <AddDog />
       <SearchForm />
       <DogList />
     </main>
