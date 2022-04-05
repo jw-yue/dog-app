@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { useCallback } from 'react'
 import { allDogs } from '../data'
-import QuestionDog from '../question_dog.jpg'
 
 const AppContext = React.createContext()
 
@@ -61,7 +60,7 @@ const AppProvider = ({ children }) => {
     if (newDogCalled) {
       form.id = dogs.length + 1
       if (form.image === undefined || form.image === '') {
-        form.image = QuestionDog
+        form.image = `${process.env.PUBLIC_URL}/assets/Benny.jpg`
       }
       dogs.push(form)
     } else if (editDogCalled) {
