@@ -20,7 +20,6 @@ const DogList = () => {
       </section>
     )
   }
-  console.log(dogs)
 
   return (
     <section className="section">

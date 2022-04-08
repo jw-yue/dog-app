@@ -20,7 +20,6 @@ const AppProvider = ({ children }) => {
   const [newDogCalled, setNewDogCalled] = useState(false)
   const [editDogCalled, setEditDogCalled] = useState(false)
   const [deleteDogCalled, setDeleteDogCalled] = useState(false)
-
   const [determineDog, setDetermineDog] = useState('')
 
   //get all dogs
@@ -56,15 +55,16 @@ const AppProvider = ({ children }) => {
   }, [searchTerm])
 
   //add dog and edit dog
-  const newDog = () => {
+  const newDog = useCallback(() => {
     if (newDogCalled) {
       form.id = dogs.length + 1
       if (form.image === undefined || form.image === '') {
         form.image = `${process.env.PUBLIC_URL}/assets/Benny.jpg`
       }
       dogs.push(form)
+      console.log(dogs)
+      setNewDogCalled(false)
     } else if (editDogCalled) {
-      console.log(newDogCalled)
       for (let i = 0; i < dogs.length; i++) {
         if (dogs[i].id === determineDog) {
           dogs[i].name = form.name
@@ -74,6 +74,7 @@ const AppProvider = ({ children }) => {
           dogs[i].description = form.description
           dogs[i].image = form.image
         }
+        setEditDogCalled(false)
       }
     }
 
@@ -83,10 +84,10 @@ const AppProvider = ({ children }) => {
     })
     setDogs(newDogList)
     setNewDogCalled(false)
-  }
+  }, [newDogCalled, editDogCalled, determineDog, form])
 
   //delete dog
-  const deleteDog = () => {
+  const deleteDog = useCallback(() => {
     if (deleteDogCalled) {
       for (let i = 0; i < dogs.length; i++) {
         if (dogs[i].id === determineDog) {
@@ -102,15 +103,15 @@ const AppProvider = ({ children }) => {
     }
     setDetermineDog('')
     setDeleteDogCalled(false)
-  }
+  }, [dogs, determineDog, deleteDogCalled])
 
   useEffect(() => {
     deleteDog()
-  }, [deleteDogCalled])
+  }, [deleteDogCalled, deleteDog])
 
   useEffect(() => {
     newDog()
-  }, [newDogCalled, editDogCalled])
+  }, [newDogCalled, editDogCalled, newDog])
 
   useEffect(() => {
     fetchDogs()

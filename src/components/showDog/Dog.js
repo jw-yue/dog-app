@@ -13,7 +13,6 @@ const DogCard = ({ name, id, breed, image, owner, size, description }) => {
           onError={({ currentTarget }) => {
             currentTarget.onerror = null // prevents looping
             currentTarget.src = `${process.env.PUBLIC_URL}/assets/question_dog.jpg`
-            console.log(currentTarget)
           }}
         />
       </div>
@@ -26,10 +25,10 @@ const DogCard = ({ name, id, breed, image, owner, size, description }) => {
       </div>
       <div>
         <span className="padding-left">
-          <DeleteDog id={id} />
+          <EditDog id={id} />
         </span>
         <span className="right padding-right">
-          <EditDog id={id} />
+          <DeleteDog id={id} />
         </span>
       </div>
     </article>
